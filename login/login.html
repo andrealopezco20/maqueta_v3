@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar sesión · Maqueteo FISE</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../style/style.css">
+  <style>
+#loginOverlay{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  font-family:'Inter',sans-serif;
+  color:#fff;
+  background:#cbd5e3;
+  overflow:auto;
+}
+#loginOverlay *{box-sizing:border-box}
+#loginOverlay .login-shell{
+  display:flex;
+  width:min(880px,96vw);
+  min-height:min(520px,92vh);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 24px 60px rgba(17,23,47,.14);
+  position:relative;
+  background:#11172f;
+}
+#loginOverlay .login-brand-panel{
+  flex:0 0 42%;
+  min-width:0;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:48px 36px;
+  position:relative;
+  z-index:2;
+}
+#loginOverlay .login-brand-panel::after{
+  content:'';
+  position:absolute;
+  right:-52px;
+  top:50%;
+  transform:translateY(-50%);
+  width:104px;
+  height:118%;
+  background:#fff;
+  border-radius:50%;
+  z-index:1;
+  pointer-events:none;
+}
+#loginOverlay .login-paulet-logo{
+  position:absolute;
+  top:22px;
+  left:22px;
+  width:min(96px,28vw);
+  height:auto;
+  z-index:3;
+}
+#loginOverlay .login-brand-center{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:1;
+  width:100%;
+  position:relative;
+  z-index:2;
+}
+#loginOverlay .login-fise-logo{
+  display:block;
+  max-width:min(220px,72%);
+  width:100%;
+  height:auto;
+}
+#loginOverlay .login-form-panel{
+  flex:1;
+  min-width:0;
+  background:linear-gradient(165deg,#1e3a5f 0%,#17233f 42%,#11172f 100%);
+  padding:52px 48px 44px 72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+#loginOverlay .login-form-panel h1{
+  font-size:32px;
+  font-weight:800;
+  margin:0 0 28px;
+  color:#f8fbff;
+  letter-spacing:-.02em;
+}
+#loginOverlay .field{position:relative;margin-bottom:14px}
+#loginOverlay .field .icon{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  color:#64748b;width:18px;height:18px;pointer-events:none;
+}
+#loginOverlay .field input,
+#loginOverlay .field select{
+  width:100%;
+  padding:13px 42px 13px 42px;
+  border:1px solid rgba(148,163,184,.22);
+  border-radius:10px;
+  background:#eef0fb;
+  color:#1f2937;
+  font-size:14px;
+  outline:none;
+  appearance:none;
+  transition:border-color .15s,box-shadow .15s;
+}
+#loginOverlay .field input:focus,
+#loginOverlay .field select:focus{
+  border-color:#38bdf8;
+  box-shadow:0 0 0 3px rgba(56,189,248,.18);
+}
+#loginOverlay .field select{
+  cursor:pointer;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+}
+#loginOverlay .field .eye{left:auto;right:14px;cursor:pointer;pointer-events:auto;color:#64748b}
+#loginOverlay .forgot{text-align:right;margin:8px 2px 22px}
+#loginOverlay .forgot a{color:#93c5fd;font-size:13px;text-decoration:none;font-weight:600}
+#loginOverlay .forgot a:hover{color:#bfdbfe}
+#loginOverlay .btn{
+  width:100%;
+  padding:13px;
+  border:none;
+  border-radius:999px;
+  background:#fff;
+  color:#11172f;
+  font-weight:700;
+  font-size:15px;
+  cursor:pointer;
+  transition:transform .15s,box-shadow .15s,background .15s;
+}
+#loginOverlay .btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
+  background:#f8fafc;
+}
+#loginOverlay .footer-credit{
+  position:absolute;
+  bottom:22px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#64748b;
+  font-size:13px;
+  font-weight:600;
+}
+body.login-active{overflow:hidden!important}
+body.login-active .app{visibility:hidden}
+@media (max-width:880px){
+  #loginOverlay{padding:16px 12px 56px}
+  #loginOverlay .login-shell{flex-direction:column;min-height:auto;width:min(440px,96vw)}
+  #loginOverlay .login-brand-panel{
+    flex:none;
+    padding:36px 24px 28px;
+    border-radius:18px 18px 0 0;
+  }
+  #loginOverlay .login-brand-panel::after{display:none}
+  #loginOverlay .login-form-panel{
+    padding:32px 28px 36px;
+    border-radius:0 0 18px 18px;
+  }
+  #loginOverlay .login-form-panel h1{font-size:26px;margin-bottom:22px;text-align:center}
+}
+
+body { margin:0; background:#cbd5e3; }
+#loginOverlay { position:static; min-height:100vh; display:flex; }
+  </style>
+</head>
+<body>
+<div id="loginOverlay">
+  <div class="login-shell">
+    <div class="login-brand-panel">
+      <img src="../logopaulet.png" alt="Paulet" class="login-paulet-logo"/>
+      <div class="login-brand-center">
+        <img src="https://cvcenergia.com.pe/images/beneficiarios-fise/fise-logo.png" alt="FISE" class="login-fise-logo"/>
+      </div>
+    </div>
+    <form class="login-form-panel" id="loginForm" onsubmit="return window.__doLogin(event)">
+      <h1>Bienvenido</h1>
+      <div class="field">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <input type="email" placeholder="Correo electrónico" value="renzovcastro1998@gmail.com" />
+      </div>
+      <div class="field">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <input type="password" id="loginPwd" placeholder="Contraseña" value="contraseña" />
+        <svg class="icon eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="var p=document.getElementById('loginPwd');p.type=p.type==='password'?'text':'password';"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div class="field">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        <select id="loginModulo">
+          <option value="administrador">Administrador</option>
+          <option value="bonogas">BonoGas</option>
+          <option value="vale-fise">Vale FISE</option>
+          <option value="ahorro-gnv">Ahorro GNV</option>
+          <option value="fotovoltaico">Fotovoltaico</option>
+          <option value="masificacion">Masificación</option>
+          <option value="electricidad-al-toque">Electricidad al toque</option>
+          <option value="mtcer">MTCER</option>
+        </select>
+      </div>
+      <div class="forgot"><a href="#">¿Olvidó su contraseña?</a></div>
+      <button class="btn" type="submit">Ingresar</button>
+    </form>
+  </div>
+  <div class="footer-credit">
+    <span>Desarrollado por</span>
+    <img src="https://paulet.space/assets/img/login2.svg" alt="i+" style="height:28px;width:auto" />
+  </div>
+</div>
+
+<script>
+window.__doLogin = function(ev) {
+  if(ev) ev.preventDefault();
+  var sel = document.getElementById('loginModulo').value;
+  try {
+    sessionStorage.setItem('maqueteo_logged_in', '1');
+    sessionStorage.setItem('maqueteo_modulo', sel);
+  } catch(e) {}
+  location.href = '../index.html?modulo=' + encodeURIComponent(sel);
+  return false;
+};
+</script>
+</body>
+</html>
