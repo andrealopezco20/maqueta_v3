@@ -1,10 +1,10 @@
-﻿
+
 window.__FOTO_MODULE_VERSION = 'foto-remove-selection-state-v1';
 
 window.__MODULE_PATHS = {
   'fotovoltaico-source': 'modulos/fotovoltaico/fotovoltaico.html?v=foto-remove-selection-state-v1',
   'electricidad-source': 'modulos/electricidad_al_toque/electricidad_al_toque.html?v=elec-remove-selection-state-v1',
-  'vale-fise-source': 'modulos/vale_fise/vale_fise.html?v=vale-unified-panel-colors-v1',
+  'vale-fise-source': 'modulos/vale_fise/vale_fise.html?v=vale-pastel-territories-v2',
   'ahorro-gnv-source': 'modulos/ahorro_gnv/ahorro_gnv.html?v=satellite-in-maps-v1',
   'ahorro-gnv-satcontrol-source': 'modulos/ahorro_gnv/ahorro_gnv_satcontrol.html?v=unified-bg-v1',
   'masificacion-source': 'modulos/masificacion/masificacion.html',
@@ -2286,9 +2286,9 @@ async function loadIntegratedModuleSources(){
   }
   window.__alignValeFisePanel=alignValeFisePanel;
 
-  if(valeFrame&&valeFrame.dataset.loaded!=='vale-unified-panel-colors-v1'&&getModuleSource('vale-fise-source')){
+  if(valeFrame&&valeFrame.dataset.loaded!=='vale-pastel-territories-v2'&&getModuleSource('vale-fise-source')){
     valeFrame.srcdoc=injectSatPanelToggleCss(getModuleSource('vale-fise-source'));
-    valeFrame.dataset.loaded='vale-unified-panel-colors-v1';
+    valeFrame.dataset.loaded='vale-pastel-territories-v2';
     injectTypographyIntoFrame(valeFrame);
     valeFrame.addEventListener('load',()=>setTimeout(alignValeFisePanel,60),{once:true});
   }else if(valeFrame&&valeFrame.dataset.loaded){
