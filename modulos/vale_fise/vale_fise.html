@@ -408,6 +408,26 @@
     .fise-detail-panel.single-beneficiary-mode .fise-beneficiary-row span{font-size:8px}
     .fise-detail-panel.single-beneficiary-mode .fise-beneficiary-row b{font-size:12px;line-height:1.2}
     .fise-detail-panel.single-beneficiary-mode .fise-status-chip{font-size:8px;padding:4px 7px}
+    .fise-detail-panel.area-selection-mode #fiseRightCharts{order:1!important}
+    .fise-detail-panel.area-selection-mode #fiseRightCharts{margin-top:0!important}
+    .fise-detail-panel.area-selection-mode #statsFilters,.fise-detail-panel.area-selection-mode .stats{display:none!important;margin:0!important;padding:0!important;height:0!important;min-height:0!important}
+    .fise-detail-panel.area-selection-mode #fiseBeneficiaryDetails{order:2!important;margin-top:0}
+    .fise-detail-panel.area-selection-mode .fise-export-action{order:3!important}
+    .fise-detail-panel.area-selection-mode .fise-alert-action{order:4!important}
+    .fise-detail-panel.area-selection-mode .corrections-suite{order:5!important}
+    .fise-area-card{display:grid;gap:10px}
+    .fise-area-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .fise-area-card-head h4{margin:0!important}
+    .fise-area-total{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;background:rgba(56,189,248,.1);color:#a5f3fc;font-size:9px;font-weight:950}
+    .fise-detail-panel table.fise-area-summary-table,.fise-detail-panel table.fise-area-records-table{border:0!important;border-radius:0!important;background:transparent!important;border-collapse:collapse!important;box-shadow:none!important;overflow:visible!important}
+    .fise-detail-panel table.fise-area-summary-table th,.fise-detail-panel table.fise-area-records-table th{border:0!important;background:#111a31!important;padding:7px 8px!important;font-size:8px!important;color:#93a4c7!important}
+    .fise-detail-panel table.fise-area-summary-table td,.fise-detail-panel table.fise-area-records-table td{border:0!important;border-bottom:1px solid rgba(41,59,103,.45)!important;background:transparent!important;padding:7px 8px!important;font-size:9px!important;color:#dbeafe!important}
+    .fise-detail-panel table.fise-area-summary-table tr:last-child td,.fise-detail-panel table.fise-area-records-table tr:last-child td{border-bottom:0!important}
+    .fise-area-summary-table .area-count{text-align:right;font-size:11px!important;font-weight:950!important}
+    .fise-area-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+    .fise-area-table-wrap{max-height:245px;overflow:auto}
+    .fise-area-records-table td:first-child{font-weight:850!important;color:#f8fbff!important}
+    .fise-area-more{text-align:center;color:#93a4c7;font-size:9px;font-weight:800;padding:7px 0 0}
     .fise-beneficiary-card{border:1px solid rgba(34,211,238,.18);background:#0b1224;border-radius:14px;padding:10px;display:grid;gap:10px;}
     .fise-beneficiary-card h4{margin:0;color:#e0f2fe;font-size:13px;font-weight:950;line-height:1.2;}
     .fise-beneficiary-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;border:1px solid rgba(148,163,184,.14);background:rgba(17,26,49,.86);border-radius:11px;padding:8px;}
@@ -1577,6 +1597,9 @@ html body .main.dashboard-fise-mode .floating-chat{right:16px!important;bottom:1
     .fise-cluster-marker{display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#38bdf8,#1d4ed8);border:3px solid rgba(255,255,255,.92);color:#fff;font:950 13px/1 Inter,'Segoe UI',sans-serif;box-shadow:0 6px 22px rgba(29,78,216,.48),0 0 0 5px rgba(56,189,248,.18);transition:transform .18s ease,box-shadow .18s ease}
     .fise-cluster-marker:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(29,78,216,.62),0 0 0 6px rgba(56,189,248,.22)}
     .fise-territory-label{background:#0f172acc;color:#fff;border:1px solid #7dd3fc;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:950;box-shadow:0 5px 18px #0007;white-space:nowrap}
+    .fise-admin-name-label{background:rgba(9,16,31,.74)!important;color:#e0f2fe!important;border:1px solid rgba(125,211,252,.38)!important;border-radius:5px!important;padding:2px 5px!important;font-size:8px!important;font-weight:800!important;line-height:1.1!important;box-shadow:0 2px 7px rgba(0,0,0,.24)!important;white-space:nowrap!important;letter-spacing:.01em!important;pointer-events:none!important}
+    .fise-admin-name-label:before{display:none!important}
+    .fise-admin-name-label.district-name{font-size:7px!important;padding:1px 4px!important;background:rgba(9,16,31,.66)!important;border-color:rgba(125,211,252,.28)!important}
     .fise-hierarchy-nav{position:relative;grid-column:1/-1;z-index:40;display:grid;grid-template-columns:repeat(5,minmax(115px,1fr)) auto;align-items:end;gap:8px;width:100%;background:rgba(8,18,36,.96);border:1px solid rgba(56,189,248,.35);border-radius:13px;padding:9px;color:#e0f2fe;box-shadow:0 8px 25px #0004}
     .fise-hierarchy-nav button{border:0;border-radius:9px;background:#0ea5e9;color:#fff;padding:7px 10px;font-size:10px;font-weight:950;cursor:pointer}
     html body .main.dashboard-fise-mode .fise-dashboard-grid>.fise-card.span-3{background:transparent!important;border:0!important;padding:0!important;box-shadow:none!important;border-radius:0!important}
@@ -3552,7 +3575,7 @@ function fiseSyncHierarchyControls(){
   fiseFillHierarchySelect(dist,districts,fiseHierarchyState.district,'Seleccione');
 }
 function fiseFeatureBounds(feature){return L.geoJSON(feature).getBounds();}
-function fiseSetDetailPanelMode(mode){qs('#fiseDetailPanel')?.classList.toggle('single-beneficiary-mode',mode==='single');}
+function fiseSetDetailPanelMode(mode){const panel=qs('#fiseDetailPanel');panel?.classList.toggle('single-beneficiary-mode',mode==='single');panel?.classList.toggle('area-selection-mode',mode==='area');}
 function fiseShowTerritorySummary(level,name){
   qs('.fise-detail-title')?.classList.remove('area-selection-active');
   fiseSetDetailPanelMode('summary');const details=qs('#fiseBeneficiaryDetails');if(details)details.innerHTML='';
@@ -3598,7 +3621,9 @@ function fiseInitializeFixedTerritorialData(){
 function fiseShowSelectedDistrict(feature){
   if(!feature)return;
   if(fiseSelectedTerritoryLayer)fiseLeafletMap.removeLayer(fiseSelectedTerritoryLayer);
-  fiseSelectedTerritoryLayer=L.geoJSON(feature,{style:{color:'#0ea5e9',weight:1.8,fillColor:'#38bdf8',fillOpacity:.055}}).addTo(fiseLeafletMap);
+  const districtName=feature.properties?.NAME_3||feature.properties?.name||fiseHierarchyState.district||'Distrito seleccionado';
+  const selectedColor=fiseTerritoryPastelColor(districtName,'district');
+  fiseSelectedTerritoryLayer=L.geoJSON(feature,{style:{color:selectedColor,weight:1.8,fillColor:selectedColor,fillOpacity:.27},onEachFeature:(f,layer)=>layer.bindTooltip(districtName,{permanent:true,direction:'center',className:'fise-admin-name-label district-name selected-name',opacity:1,interactive:false})}).addTo(fiseLeafletMap);
 }
 function fiseSelectHierarchyFromControl(level,name){
   if(!name){if(level==='department')fiseHierarchyBack();return;}
@@ -3621,18 +3646,24 @@ function fiseSelectHierarchyFromControl(level,name){
     fiseLeafletMap.fitBounds(fiseFeatureBounds(feature),{padding:[34,34],maxZoom:13,animate:true});fiseSyncHierarchyControls();fiseBuildBeneficiariesOnMap();
   }
 }
+function fiseTerritoryPastelColor(name,level){
+  const provincePalette=['#3aa7d8','#42b7a0','#668fd5','#82b84f','#9273c8','#46afc3','#789acb','#48aa82','#708cc6','#55b58a'];
+  const districtPalette=['#48a9cf','#65b991','#789bd0','#91b85d','#927cc3','#4eb4bb','#779dc7','#67b286','#7d91c5','#54a8bd','#9caf61','#6e99bd'];
+  const palette=level==='district'?districtPalette:provincePalette;let hash=0;for(const ch of String(name||''))hash=((hash<<5)-hash)+ch.charCodeAt(0);return palette[Math.abs(hash)%palette.length];
+}
 function fiseRenderHierarchyLevel(level){
   if(!fiseLeafletMap||!window.L)return;
   if(fiseSelectedTerritoryLayer){fiseLeafletMap.removeLayer(fiseSelectedTerritoryLayer);fiseSelectedTerritoryLayer=null;}
   if(fiseHierarchyLayer)fiseLeafletMap.removeLayer(fiseHierarchyLayer);
-  const colors={department:'#2563eb',province:'#06b6d4',district:'#2563eb'};
+  const colors={department:'#2563eb',province:'#67b7dc',district:'#73b9d1'};
   fiseHierarchyState.level=level;
   fiseHierarchyLayer=L.geoJSON(fiseTerritoryGeoJSON(level),{
-    style:()=>({color:colors[level],weight:level==='district'?1:1.25,opacity:.92,fillColor:colors[level],fillOpacity:level==='district'?.015:.025,dashArray:null,lineCap:'round',lineJoin:'round'}),
+    style:feature=>{const color=level==='department'?colors[level]:fiseTerritoryPastelColor(feature.properties?.name,level);return {color,weight:level==='district'?1:1.25,opacity:.92,fillColor:color,fillOpacity:level==='district'?.22:.18,dashArray:null,lineCap:'round',lineJoin:'round'};},
     onEachFeature:(feature,layer)=>{
       const p=feature.properties;
-      layer.bindTooltip(`${p.name} · ${p.count} registros`,{sticky:true,className:'fise-territory-label'});
-      layer.on('mouseover',()=>layer.setStyle({fillOpacity:.14,weight:2}));
+      if(level==='province'||level==='district')layer.bindTooltip(p.name,{permanent:true,direction:'center',className:'fise-admin-name-label '+(level==='district'?'district-name':'province-name'),opacity:.96,interactive:false});
+      else layer.bindTooltip(`${p.name} · ${p.count} registros`,{sticky:true,className:'fise-territory-label'});
+      layer.on('mouseover',()=>layer.setStyle({fillOpacity:.32,weight:2}));
       layer.on('mouseout',()=>fiseHierarchyLayer.resetStyle(layer));
       layer.on('click',e=>{if(e.originalEvent)L.DomEvent.stopPropagation(e.originalEvent);if(fiseActiveMapTool!=='select'){fiseHandleMapClick(e);return;}fiseSelectTerritory(p.name,level,layer);});
       layer.on('dblclick',e=>{if(fiseActiveMapTool==='polygon')fiseHandleMapDoubleClick(e);});
@@ -3872,6 +3903,7 @@ function fiseSetActiveAreaRecords(records,title,extra){
   fiseOpenDetailPanel(); fiseUpdateDetailHeaderArea(records,title,extra); fiseRenderAreaDetails(records,title); fiseRenderRightCharts(records);
 }
 function fiseUpdateDetailHeaderArea(records,title,extra){
+  fiseSetDetailPanelMode('area');
   qs('.fise-detail-title')?.classList.add('area-selection-active');
   qs('#fiseDetailContext').textContent='Área:'; qs('#fiseDetailName').textContent=(title||'ÁREA SELECCIONADA'); qs('#fiseDetailPlace').textContent=extra||'Utilitario GIS · Vale FISE';
 }
@@ -3881,12 +3913,15 @@ function fiseRenderAreaDetails(records,title){
   const byEntity=[['Distribuidora',records.filter(r=>r.entidad==='Distribuidora').length],['Qali Warma',records.filter(r=>r.entidad==='Qali Warma').length],['Comedor Popular',records.filter(r=>r.entidad==='Comedor Popular').length],['Ollas Comunes',records.filter(r=>r.entidad==='Ollas Comunes').length]].filter(x=>x[1]>0);
   const byZone=[['Urbano',records.filter(r=>r.zona==='Urbano').length],['Rural',records.filter(r=>r.zona==='Rural').length]].filter(x=>x[1]>0);
   const byStatus=[['Activo',act],['Suspendido',sus],['Excluido',exc]].filter(x=>x[1]>0);
-  box.innerHTML=`<div class="fise-beneficiary-card"><h4>${title||'Resumen del área'} (${total})</h4>
-    <div class="fise-beneficiary-row"><span>Total beneficiarios</span><b>${total}</b></div>
-    <div class="fise-beneficiary-row"><span>Activos</span><b style="color:#86efac">${act}</b></div>
-    <div class="fise-beneficiary-row"><span>Suspendidos</span><b style="color:#fde68a">${sus}</b></div>
-    <div class="fise-beneficiary-row"><span>Excluidos</span><b style="color:#fca5a5">${exc}</b></div>
-    <div class="fise-selection-list">${records.slice(0,20).map(r=>`<div class="fise-selection-mini"><b>${r.nombre}</b><span>${r.entidad} · ${r.estado} · ${r.departamento}</span></div>`).join('')}${records.length>20?'<div class="fise-selection-mini" style="color:#93a4c7;text-align:center">... y '+(records.length-20)+' más</div>':''}</div>
+  box.innerHTML=`<div class="fise-beneficiary-card fise-area-card">
+    <div class="fise-area-card-head"><h4>Beneficiarios del área seleccionada</h4><span class="fise-area-total"><i class="bi bi-people"></i> ${total} total</span></div>
+    <table class="fise-area-summary-table"><thead><tr><th>Estado</th><th style="text-align:right">Beneficiarios</th></tr></thead><tbody>
+      <tr><td><span class="fise-area-dot" style="background:#22c55e"></span>Activos</td><td class="area-count" style="color:#86efac!important">${act}</td></tr>
+      <tr><td><span class="fise-area-dot" style="background:#f59e0b"></span>Suspendidos</td><td class="area-count" style="color:#fde68a!important">${sus}</td></tr>
+      <tr><td><span class="fise-area-dot" style="background:#ef4444"></span>Excluidos</td><td class="area-count" style="color:#fca5a5!important">${exc}</td></tr>
+    </tbody></table>
+    <div class="fise-area-table-wrap"><table class="fise-area-records-table"><thead><tr><th>Beneficiario</th><th>Entidad</th><th>Estado</th></tr></thead><tbody>${records.slice(0,20).map(r=>`<tr><td>${r.nombre}</td><td>${r.entidad}</td><td><span class="fise-status-chip ${fiseStatusChipClass(r.estado)}">${r.estado}</span></td></tr>`).join('')}</tbody></table></div>
+    ${records.length>20?'<div class="fise-area-more">Mostrando 20 de '+total+' beneficiarios</div>':''}
   </div>`;
 }
 
